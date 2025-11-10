@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firey x Nerd wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="new_icon.svg">
+
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div id="mainContainer">
+        <header id="nav">
+                <div id="right">
+                    <div id="imgWrapper">
+                        <img id="iconWhite" src="new_icon.svg" alt="ikona">
+                        <img id="iconBlack" src="black_icon.svg" alt="ikona">
+                    </div>
+                    
+                    <div id="title">
+                        <h1>Firey X Nerd</h1>
+                        <p id="titleText">wiki</p>
+                    </div>
+                </div>
+
+                <div id="left">
+                    <a href="index.html#glowna">Strona główna</a>
+                    <a href="index.html#mozliwosci">Możliwości</a>
+                    <a href="index.html#zombek">Zomb</a>
+                </div>
+        </header>
+        <main>
+                <div id="glowna">
+                <h2 id="typewriter">&nbsp;</h2>
+                </div>
+                <p>
+                    Witamy na stronie poświęconej trylogii <i>Firey x Nerd</i>! <br>
+                    Znajdziesz tutaj wszystko czego byś potrzebował do zagłębienia się w ten niesamowity, pełen niespodzianek i
+                    zwariowany świat.
+                </p>
+        </main>
+        
+    </div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const element = document.getElementById("typewriter");
+        let tekst = "Witaj na naszej stronie!";
+        let chars = tekst.split('');
+        let i = 0;
+        let kierunek = true; // true -> pisze, false -> odejdmuje
+        
+        type()
+        function type(){
+            console.log(i);
+            if (i < chars.length) // będzie robić dopóki i będzie mniejsze od wielkości tablicy
+            {
+                if(kierunek){
+                    element.innerHTML += chars[i];
+                }
+                else{
+                    text = element.innerText;
+                    text = text.slice(0, -1)
+                    element.innerHTML = text
+                }
+
+                setTimeout(type, 150);
+                i++
+                
+            }
+            else{
+                
+                if(kierunek){
+                    i = 3;
+                    kierunek = false;
+                }
+                else{
+                    i = 0;
+                    kierunek = true;
+                }
+                setTimeout(type, 1500);
+                
+            }
+        
+        }   
+
+        const header = document.getElementById("nav");
+        const imgW = document.getElementById("iconWhite");
+        const imgB = document.getElementById("iconBlack");
+
+        window.addEventListener("scroll", () => {
+            if ((window.scrollY >= 800 && window.scrollY <= 1900) || (window.scrollY > 3150 && window.scrollY <=  4000)){
+                header.classList.add("black");
+                imgB.classList.add("flip");
+                imgW.classList.add("flip");
+            }
+            else{
+                header.classList.remove("black");
+                imgB.classList.remove("flip");
+                imgW.classList.remove("flip");
+            }
+
+        })
+    </script>
+</body>
+</html>

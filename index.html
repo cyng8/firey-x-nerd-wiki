@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firey x Nerd wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="new_icon.svg">
+
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div id="mainContainer">
+        <header id="nav">
+                <div id="right">
+                    <div id="imgWrapper">
+                        <img id="iconWhite" src="new_icon.svg" alt="ikona">
+                        <img id="iconBlack" src="black_icon.svg" alt="ikona">
+                    </div>
+                    
+                    <div id="title">
+                        <h1>Firey X Nerd</h1>
+                        <p id="titleText">wiki</p>
+                    </div>
+                </div>
+
+                <div id="left">
+                    <a href="index.html#glowna">Strona główna</a>
+                    <a href="index.html#mozliwosci">Możliwości</a>
+                    <a href="index.html#zombek">Zomb</a>
+                </div>
+        </header>
+        <main>
+                <div id="glowna">
+                <h2 id="typewriter">&nbsp;</h2>
+                </div>
+                <p>
+                    Witamy na stronie poświęconej trylogii <i>Firey x Nerd</i>! <br>
+                    Znajdziesz tutaj wszystko czego byś potrzebował do zagłębienia się w ten niesamowity, pełen niespodzianek i
+                    zwariowany świat.
+                </p>
+        </main>
+        <div id="mainSite">
+            <div id="mainSiteContent">
+                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <h1>Możliwości</h1>
+                </div>
+                
+                <div id="mozliwosci">
+                    <div data-aos="flip-left">
+                        <div id="czytajBox">
+                            <a href="czytaj.html"><h2>Czytaj</h2></a> <br>
+                            <p>W przystępny i wygodny sposób czytaj dowolne części opowieści <strong>Firey x Nerd!</strong></p>
+                            
+                        </div>
+                    </div>
+                    <div data-aos="flip-down">
+                        <div id="wikiBox">
+                            <h2>Wiki</h2> <br>
+                            <p>Wszystko na temat <strong>Fireya x Nerda</strong></p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right">
+                        <div id="teorieBox">
+                            <h2>Teorie</h2> <br>
+                            <p>Spekulacje i próby rozwiązania fabuły <strong>Fireya x Nerda</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="marzenia">
+            <div data-aos="fade-down-right">
+                <img src="books.png" alt="books">
+            </div>
+            <div>
+                <h2>Wielkie marzenia &#128542;</h2>
+                <div data-aos="fade-left" id="marzeniaBox">
+                    <p id="firstLetterTab">
+                    <strong>Firey x Nerd</strong> to trylogia elektroniczna, ale zawsze chcieliśmy przenieść ją na
+                    pachnące kartki waszych książek, które pięknie zdobiłyby wasze mieszkania i dopasowały się do dowolnego designu.
+                    </p> <br>
+                    <p>
+                        Niestety wszystko na świecie kosztuje, a nam brakuje odpowiednich środków na rozpoczęcie produkcji  książek i ich dystrybucję...</p>
+                    <p> <br>
+                        W przyszłości wystartuje możliwość wpłacenia datku na nasz <strong>szczytny cel i wielkie marzenie!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="zombek">
+            <div data-aos="zoom-in-down">
+                <div id="zombekTitle">
+                    <h2>The&nbsp;</h2><h2 id="c">Zombek</h2>
+                </div> 
+            </div>
+            
+            <div data-aos="zoom-in-up">
+                <div id="zombekBoxes">
+                    <div id="relative">
+                        <div id="rightDescription">
+                            <h3>
+                               fnasp 2 będzie w te wakacje
+                            </h3>
+                            <p>
+                                  ~zomb
+                            </p>
+                        </div>
+                    </div>
+                 <div id="zombekDescription">
+                        <img src="wyder.png" alt="asd">
+                    </div>
+
+                    <div id="relative">
+                        <div id="leftDescription">
+                            <h3>
+                         Kim jest zomb?
+                            </h3>
+                            <p>
+                            kreator smaku, syn koleżanki twojej mamy, poeta, pisarz, wieszcz, tragarz, męczennik, twórca 
+                            tekstów, piosenkarz, sokowirówka, literat, kompozytor i twórca gier
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="onas"></div>
+        <footer>
+        </footer>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const element = document.getElementById("typewriter");
+        let tekst = "Witaj na naszej stronie!";
+        let chars = tekst.split('');
+        let i = 0;
+        let kierunek = true; // true -> pisze, false -> odejdmuje
+        
+        type()
+        function type(){
+            console.log(i);
+            if (i < chars.length) // będzie robić dopóki i będzie mniejsze od wielkości tablicy
+            {
+                if(kierunek){
+                    element.innerHTML += chars[i];
+                }
+                else{
+                    text = element.innerText;
+                    text = text.slice(0, -1)
+                    element.innerHTML = text
+                }
+
+                setTimeout(type, 150);
+                i++
+                
+            }
+            else{
+                
+                if(kierunek){
+                    i = 3;
+                    kierunek = false;
+                }
+                else{
+                    i = 0;
+                    kierunek = true;
+                }
+                setTimeout(type, 1500);
+                
+            }
+        
+        }   
+
+        const header = document.getElementById("nav");
+        const imgW = document.getElementById("iconWhite");
+        const imgB = document.getElementById("iconBlack");
+
+        window.addEventListener("scroll", () => {
+            if ((window.scrollY >= 800 && window.scrollY <= 1900) || (window.scrollY > 3150 && window.scrollY <=  4000)){
+                header.classList.add("black");
+                imgB.classList.add("flip");
+                imgW.classList.add("flip");
+            }
+            else{
+                header.classList.remove("black");
+                imgB.classList.remove("flip");
+                imgW.classList.remove("flip");
+            }
+
+        })
+    </script>
+</body>
+</html>
